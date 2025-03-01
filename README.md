@@ -1,6 +1,8 @@
 актуальный код в папке v2
 в файле seleected функция on_chosen_operation_type не получает item_id, хотя он передается, и если выводить через args  - он есть...
 
+если выводить все что принимает функция - (CallbackQuery(*тут весь коллбэк*), <aiogram_dialog.widgets.kbd.select.Select object at 0x0000023DB68037A0>, <aiogram_dialog.manager.manager.ManagerImpl object at 0x0000023DB83D92B0>, *_('2')_*)
+
 ошибка ---  TypeError: on_chosen_operation_type() missing 1 required positional argument: 'item_id'
 
 

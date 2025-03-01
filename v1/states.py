@@ -2,6 +2,7 @@ from aiogram.fsm.state import StatesGroup, State
 
 
 class MySG(StatesGroup):
+    category_selection = State()
     select_operation_type = State()
     expenses = State()
     incomes = State()

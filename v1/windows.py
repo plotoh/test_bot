@@ -1,10 +1,8 @@
-from datetime import date
-
-from aiogram_dialog.widgets.input import MessageInput, TextInput
-from aiogram_dialog.widgets.kbd import Button, ListGroup, Group, ScrollingGroup, Url, Next, CalendarConfig
+from aiogram_dialog.widgets.input import TextInput
+from aiogram_dialog.widgets.kbd import Group, Url, CalendarConfig
 from aiogram_dialog.widgets.kbd import Calendar
-from aiogram_dialog import Window, Dialog, DialogManager
-from aiogram_dialog.widgets.kbd import Button, Back
+from aiogram_dialog import Window, Dialog
+from aiogram_dialog.widgets.kbd import Button
 from aiogram_dialog.widgets.text import Const, Format
 
 import getters

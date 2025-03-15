@@ -1,16 +1,16 @@
 from aiogram_dialog.widgets.input import TextInput
-from aiogram_dialog.widgets.kbd import Group, Url, CalendarConfig
+from aiogram_dialog.widgets.kbd import Group, Url, CalendarConfig, ScrollingGroup
 from aiogram_dialog.widgets.kbd import Calendar
 from aiogram_dialog import Window, Dialog
 from aiogram_dialog.widgets.kbd import Button
 from aiogram_dialog.widgets.text import Const, Format
 
-import getters
-import keyboards
-import selected as s
-from handlers import error
-from states import MySG
-
+import v1.getters
+import v1.keyboards
+import v1.selected as s
+from v1.handlers import error
+from v1.states import MySG
+from v2 import lexicon as l
 
 operation_type_window = Window(
     Format("здарова, {name}!"),
@@ -26,13 +26,13 @@ operation_type_window = Window(
 # getter=window1_get_data,  # here we specify data getter for window1
 
 
-category_window = Window(
-        Format("{dialog_data[operation_type]} --- Категории"),
-        Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
-        keyboards.paginated_categories(s.on_chosen_category),
-        state=MySG.category_selection,
-        getter=getters.get_categories,
-    )
+# category_window = Window(
+#         Format("{dialog_data[operation_type]} --- Категории"),
+#         Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
+#         v1.keyboards.paginated_categories(s.on_chosen_category),
+#         state=MySG.category_selection,
+#         getter=v1.getters.get_categories,
+#     )
 
 # category_window = Window(
 #     Format("{dialog_data[operation_type]} --- Категории"),
@@ -45,40 +45,39 @@ category_window = Window(
 #     state=MySG.category_selection,
 # )
 
-#
-# expenses_categories_window = Window(
-#     Format("{dialog_data[operation_type]} --- Категории"),
-#     Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
-#     ScrollingGroup(
-#         *[Button(Const(v), id=k, on_click=s.select_category) for k, v in expenses_dct.items()],
-#         id="expenses",
-#         width=2,
-#         height=5,
-#     ),
-#     state=MySG.expenses,
-# )
-#
-# incomes_categories_window = Window(
-#     Format("{dialog_data[operation_type]} --- Категории"),
-#     Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
-#     Group(
-#         *[Button(Const(v), id=k, on_click=s.select_category) for k, v in incomes_dct.items()],
-#         id="incomes",
-#         width=2,
-#     ),
-#     state=MySG.incomes,
-# )
-#
-# investments_categories_window = Window(
-#     Format("{dialog_data[operation_type]} --- Категории"),
-#     Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
-#     Group(
-#         *[Button(Const(v), id=k, on_click=s.select_category) for k, v in investments_dct.items()],
-#         id="investments",
-#         width=2,
-#     ),
-#     state=MySG.investments,
-# )
+expenses_categories_window = Window(
+    Format("{dialog_data[operation_type]} --- Категории"),
+    Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
+    ScrollingGroup(
+        *[Button(Const(v), id=k, on_click=s.select_category) for k, v in l.expenses_dct.items()],
+        id="expenses",
+        width=2,
+        height=5,
+    ),
+    state=MySG.expenses,
+)
+
+incomes_categories_window = Window(
+    Format("{dialog_data[operation_type]} --- Категории"),
+    Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
+    Group(
+        *[Button(Const(v), id=k, on_click=s.select_category) for k, v in l.incomes_dct.items()],
+        id="incomes",
+        width=2,
+    ),
+    state=MySG.incomes,
+)
+
+investments_categories_window = Window(
+    Format("{dialog_data[operation_type]} --- Категории"),
+    Button(Const("Назад"), id="back", on_click=s.back_to_operation_type),
+    Group(
+        *[Button(Const(v), id=k, on_click=s.select_category) for k, v in l.investments_dct.items()],
+        id="investments",
+        width=2,
+    ),
+    state=MySG.investments,
+)
 
 table_window = Window(
     Format(
@@ -157,17 +156,17 @@ edit_date_window = Window(
 
 finance_dialog = Dialog(
     operation_type_window,
-    category_window,
-    # expenses_categories_window,
-    # incomes_categories_window,
-    # investments_categories_window,
+    # category_window,
+    expenses_categories_window,
+    incomes_categories_window,
+    investments_categories_window,
     table_window,
     settings_window,
     amount_input_window,
     set_operation_window,
     comment_input_window,
     edit_date_window,
-    getter=getters.dialog_get_data  # здесь мы указываем метод получения данных для диалога
+    getter=v1.getters.dialog_get_data  # здесь мы указываем метод получения данных для диалога
 )
 
 # переписать логику кнопки назад

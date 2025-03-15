@@ -2,16 +2,14 @@ from aiogram.fsm.state import StatesGroup, State
 
 
 class FinanceStates(StatesGroup):
-    select_op_types = State()
-    select_categories = State()
-    enter_amount = State()
+    select_op_type = State()
+    select_category = State()  #  добавить возможность редактирования, а не только ввода
+    enter_amount = State()  #  добавить возможность редактирования, а не только ввода
+
     set_operation = State()
 
-
-class EditOperation(StatesGroup):
     enter_comment = State()
-    edit_category = State()
-    edit_amount = State()
     edit_date = State()
+
     cancel_operation = State()
     set_regular = State()

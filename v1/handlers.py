@@ -1,26 +1,14 @@
 from typing import Any
 
-from aiogram import Bot, Dispatcher, Router
+from aiogram import Router
 from aiogram.filters import Command
-from aiogram.filters.state import State, StatesGroup
-from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message
 
-from aiogram_dialog import (
-    Dialog, DialogManager, setup_dialogs, StartMode, Window, ShowMode,
-)
-from aiogram_dialog.widgets.input import MessageInput, TextInput
-from aiogram_dialog.widgets.kbd import Button, ListGroup, Group, ScrollingGroup, Url, Next
-from aiogram_dialog.widgets.text import Const, Format
-
-from aiogram.filters.state import StatesGroup, State
-from aiogram.types import CallbackQuery
+from aiogram_dialog import StartMode
 
 from aiogram_dialog import Window, Dialog, DialogManager
-from aiogram_dialog.widgets.kbd import Button, Back
-from aiogram_dialog.widgets.text import Const, Format
 
-from states import MySG
+from v1.states import MySG
 
 router = Router()
 

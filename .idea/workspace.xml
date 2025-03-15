@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="957b928e-32a4-43c7-8d7b-a3e6d444f636" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/v1/getters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asssa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/getters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/handlers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selected.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/selected.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/states.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/windows.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/selected.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/selected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/windows.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/getters.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/getters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/keyboards.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/keyboards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/lexicon.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/lexicon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/selected.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/selected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/states.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/states.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/windows.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.asssa.executor": "Run",
-    "Python.bot.executor": "Run",
-    "Python.lexicon.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.seclectt.executor": "Run",
-    "Python.selected.executor": "Run",
-    "Python.windows.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/PythonProjects/test_bot/main.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.asssa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lexicon.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.seclectt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.selected.executor&quot;: &quot;Run&quot;,
+    &quot;Python.windows.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/PythonProjects/test_bot/main.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\PythonProjects\test_bot\v1" />
@@ -100,5 +102,16 @@
       <updated>1740556267444</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

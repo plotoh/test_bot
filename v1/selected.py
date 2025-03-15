@@ -9,7 +9,7 @@ from aiogram_dialog import Window, Dialog, DialogManager
 from aiogram_dialog.widgets.kbd import Button, Back, ScrollingGroup, Select
 from aiogram_dialog.widgets.text import Const, Format
 
-from states import MySG
+from v1.states import MySG
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -48,7 +48,7 @@ async def select_operation_type(c: CallbackQuery, button: Button, manager: Dialo
         return category_keyboard
         # await manager.switch_to(state=MySG.expenses)
     elif c.data == 'incomes':
-        manager.dialog_data['operation_type'] = finances[c.data]
+        manager.dialog_data['operation_type'] = c.data
         category_keyboard = [Button(Const(v), id=k, on_click=select_category) for k, v in incomes_dct.items()]
         return category_keyboard
         # await manager.switch_to(state=MySG.incomes)
